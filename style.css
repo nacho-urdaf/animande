@@ -1,0 +1,43 @@
+body{
+    background-color: #505050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+section{
+    width: 300px;
+}
+
+section p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    transform: rotate(1deg);
+}
+
+section {
+    opacity: 0;
+    animation: fades 10s infinite ease-in-out;
+    animation-delay: calc(var(--i) * 0.01s);
+    filter: blur(4px);
+  }
+  
+  @keyframes turn {
+    100% {
+      transform: scale(1.1) rotateX(-10deg) rotatey(-10deg) rotatez(-4deg);
+    }
+  }
+  
+  @keyframes fades {
+    50% {
+      opacity: 1;
+      filter: blur(0);
+    }
+    70% {
+      opacity: 0;
+      filter: blur(4px);
+    }
+  }
